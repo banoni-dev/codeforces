@@ -1,6 +1,5 @@
  fn main() {
 
-    // codeforces.com/problemset/problem/4/A
 
     let mut input = String::new();
     std::io::stdin().read_line(&mut input).unwrap();
