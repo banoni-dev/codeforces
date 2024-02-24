@@ -1,4 +1,6 @@
 fn main() {
+
+
     // 158-A solution
     let mut input = String::new();
     std::io::stdin().read_line(&mut input).unwrap();
@@ -18,5 +20,6 @@ fn main() {
             count += 1;
         }
     }
+    
     println!("{}", count);
 }
