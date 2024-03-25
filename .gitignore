@@ -1,9 +1,9 @@
 # Ignore all files
 *
 
-# Except .rs files
+# Except .rs and .cpp files
 !*.rs
-
+!*.cpp
 
 # Include all folders
 !*/
