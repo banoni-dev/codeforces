@@ -1,20 +1,23 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-
 int main() {
-    int n;
-  while (cin >> n, n) {
-  // calculate the number of divisors
-  int count = 0;
-  for (int i = 1; i <= n; i++) {
-    if (n % i == 0) {
-      count++;
+    unsigned ans = 0;
+    for (int i = 0; i < 21; i++) {
+        string s;
+        cin >> s;
+        int count = 0;
+        for (int j = 0; j < s.size(); j++) {
+            if (s[j] == '1') {
+                count++;
+            }
+        }
+        if (count > 10) {
+            ans++;
+        }
     }
-  }
-
-  printf("%s\n", count % 2 == 0 ? "no" : "yes");
-  }
+    cout << ans << endl;
     return 0;
 }
