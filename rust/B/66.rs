@@ -44,42 +44,21 @@ fn solve() {
     let mut max = 0;
     for i in 0..sz {
         let mut count = 1;
-        if i == 0 {
-            count += 1;
-            for j in 1..sz {
-                if arr[j-1] >= arr[j] {
-                    count += 1;
-                }else {
-                    break;
-                }
+        for j in i..sz-1 {
+            if arr[j] >= arr[j+1] {
+                count += 1;
+            } else {
+                break;
             }
-        }else if i == sz-1 {
-            for j in (0..sz-1).rev() {
-                if arr[j] <= arr[j+1] {
-                    count += 1;
-                }else {
-                    break;
-                }
-            }
-        }else {
-            for j in 0..i {
-                if arr[j] >= arr[j+1] {
-                    count += 1;
-                }else {
-                    break;
-                }
-            }
-            for j in (i..sz-1) {
-                println!("j = {}, arr {}", j, arr[j]);
-                if arr[j] >= arr[j+1] {
-                    count += 1;
-                }else {
-                    break;
-                }
+        }
+        for k in (0..i).rev() {
+            if arr[k] <= arr[k+1] {
+                count += 1;
+            } else {
+                break;
             }
         }
         max = max.max(count);
-        println!("max = {}, count = {}, fun = {}", max, count, max.max(count));
     }
     println!("{}", max);
     
