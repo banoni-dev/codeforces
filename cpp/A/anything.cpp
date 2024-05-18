@@ -26,7 +26,51 @@ const double PI = acos(-1.0);
 
 
 void solve() {
-    
+
+    int n;
+    cin >> n;
+
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+
+    vector<int> b(n);
+    for (int i = 0; i < n; i++) {
+        cin >> b[i];
+    }
+
+    vector<int> c(n);
+    for (int i = 0; i < n; i++) {
+        cin >> c[i];
+    }
+
+    vector<int> ans;
+    ans.push_back(a[0]);
+
+    for (int i = 1; i < n - 1; i++) {
+        if (a[i] != ans[i - 1]) {
+            ans.push_back(a[i]);
+        } else if (b[i] != ans[i - 1]) {
+            ans.push_back(b[i]);
+        } else {
+            ans.push_back(c[i]);
+        }
+    }
+
+    if (a[n - 1] != ans[n - 2] && a[n - 1] != ans[0]) {
+        ans.push_back(a[n - 1]);
+    } else if (b[n - 1] != ans[n - 2] && b[n - 1] != ans[0]) {
+        ans.push_back(b[n - 1]);
+    } else {
+        ans.push_back(c[n - 1]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        cout << ans[i] << " ";
+    }
+    cout << endl;
+
 }
 
 
