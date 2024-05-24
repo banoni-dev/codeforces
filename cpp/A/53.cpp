@@ -38,9 +38,7 @@ void solve() {
             v.pb(t);
         }
     }
-    sort(all(v), [](string a, string b) {
-        return a.size() < b.size();
-    });
+    sort(all(v));
     if(v.size() == 0) {
         cout << s << endl;
         return;
