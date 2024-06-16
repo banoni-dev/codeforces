@@ -28,13 +28,9 @@ const double PI = acos(-1.0);
 
 
 void solve() {
-    ll n, m, a;
-    cin >> n >> m >> a;
-
-    n = n - n%a;
-    m = m - m%a;
-    ll ans = max(1ll, n*m/a);
-    cout << ans << endl;
+    int n;    
+    cin >> n;
+    cout << (n-1) / 2 << endl;
 }
 
 
@@ -48,8 +44,8 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t = 1;
-    //cin >> t;
+    int t;
+    cin >> t;
 
     while (t--) {
         solve();
