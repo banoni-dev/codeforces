@@ -21,10 +21,23 @@ const int INF = INT_MAX;
 const double PI = acos(-1.0);
 
 void solve() {
-  string s;
-  int s;
-  cin >> s >> n;
-  if( s==
+  int a, b, c;
+  cin >> a >> b >> c;
+  for (int i = 0; i < 5; i++) {
+    if (a <= b && a <= c) {
+      a++;
+      continue;
+    }
+    if (b <= a && b <= c) {
+      b++;
+      continue;
+    }
+    if (c <= a && c <= b) {
+      c++;
+      continue;
+    }
+  }
+  cout << min(a * b * c, 1000) << endl;
 }
 
 int main() {

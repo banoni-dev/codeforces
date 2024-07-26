@@ -21,10 +21,18 @@ const int INF = INT_MAX;
 const double PI = acos(-1.0);
 
 void solve() {
-  string s;
-  int s;
-  cin >> s >> n;
-  if( s==
+  int n, m, k;
+  cin >> n >> m >> k;
+  for (int i = n; i >= k; i--) {
+    cout << i << " ";
+  }
+  for (int i = m + 1; i <= k - 1; i++) {
+    cout << i << " ";
+  }
+  for (int i = 1; i <= m; i++) {
+    cout << i << " ";
+  }
+  cout << endl;
 }
 
 int main() {

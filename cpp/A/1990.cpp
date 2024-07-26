@@ -21,10 +21,23 @@ const int INF = INT_MAX;
 const double PI = acos(-1.0);
 
 void solve() {
-  string s;
-  int s;
-  cin >> s >> n;
-  if( s==
+  int n;
+  cin >> n;
+  int x, y;
+  cin >> x;
+  int mx = x;
+  int ans = 1;
+  for (int i = 1; i < n; i++) {
+    cin >> y;
+    if (y > mx) {
+      mx = y;
+      ans = 0;
+    }
+    if (y == mx) {
+      ans++;
+    }
+  }
+  cout << (ans % 2 == 0 ? "NO" : "YES") << endl;
 }
 
 int main() {

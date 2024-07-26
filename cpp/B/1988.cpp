@@ -21,10 +21,27 @@ const int INF = INT_MAX;
 const double PI = acos(-1.0);
 
 void solve() {
+  int n;
+  cin >> n;
   string s;
-  int s;
-  cin >> s >> n;
-  if( s==
+  cin >> s;
+  int d = 0, o = 0;
+  for (int i = 0; i < n; i++) {
+    if (s[i] == '1') {
+      o++;
+    }
+    if (s[i] == '0') {
+      while (i < n && s[i] == '0') {
+        i++;
+      }
+
+      if (s[i] == '1') {
+        o++;
+      }
+      d++;
+    }
+  }
+  cout << ((d < o) ? "Yes" : "No") << endl;
 }
 
 int main() {

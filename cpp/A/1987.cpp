@@ -1,5 +1,7 @@
 
 
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -20,23 +22,37 @@ const int MOD = 1e9 + 7;
 const int INF = INT_MAX;
 const double PI = acos(-1.0);
 
+
+
+
+
+
 void solve() {
-  string s;
-  int s;
-  cin >> s >> n;
-  if( s==
+	int n,k;
+    	cin >> n >> k;
+	cout << n*k - k + 1 << endl;
 }
+
+
+
+
+
+
+
 
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-  int t;
-  cin >> t;
+    int t;
+    cin >> t;
 
-  while (t--) {
-    solve();
-  }
+    while (t--) {
+        solve();
+    }
 
-  return 0;
+    return 0;
 }
+
+
+
